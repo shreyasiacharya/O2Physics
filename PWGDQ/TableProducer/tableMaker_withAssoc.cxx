@@ -707,7 +707,7 @@ struct TableMaker {
         // reducedEventIdx = fCollIndexMap[collision.globalIndex()]; // This gives the first collision form the table
         if (fCollIndexMap.find(track.collisionId()) == fCollIndexMap.end())
           continue; // Protection against crash, where the original collision IDs of tracks were removed by pp-filter or zorro selection and hence the track is now orphaned
-        
+
         uint32_t reducedEventIdx = fCollIndexMap[track.collisionId()]; // This gives the original iD of the track
         // NOTE: trackBarrelInfo stores the index of the collision as in AO2D (for use in some cases where the analysis on skims is done
         //   in workflows where the original AO2Ds are also present)
